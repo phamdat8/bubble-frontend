@@ -3,7 +3,8 @@
         <div class="background">
             <div class="row">
                 <div class="col-10 p-5">hello</div>
-                <button class="col-2 btn btn-ouline-primary">Hello</button>
+                    <button class="col-2 btn btn-ouline-primary">Hello</button>
+                    <button class="col-2 btn btn-ouline-primary">Hello</button>
                 <div class="col-4">hello 2</div>
             </div>
         </div>
