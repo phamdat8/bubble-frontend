@@ -8,7 +8,7 @@
                         <button class="btn-layout"><span>Đăng nhập</span></button>
                     </div>
                     <div class="button_container m-2">
-                        <button class="btn-layout"><span>Đăng ký</span></button>
+                        <router-link to="/dangky"><button class="btn-layout"><span>Đăng ký</span></button></router-link>
                     </div>
                 </div>
             </div>

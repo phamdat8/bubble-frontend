@@ -17,6 +17,7 @@
     "email": "phamdat.ltd@gmail.com"
   },
   "dependencies": {
+    "axios": "^0.21.3",
     "normalize.css": "^7.0.0",
     "object-assign": "^4.1.1",
     "offline-plugin": "^4.8.0",
