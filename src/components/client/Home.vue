@@ -2,31 +2,41 @@
     <div id="home">
         <div class="background">
 <div class="row">
-                <div  class="col-4 text-center">
-                   <img src="static\images\blue-bubble.png" width="100" height="100">
-                </div>
+                <div  class="col-4" style="padding-left: 300px;">
+                    <img src="static\images\bubble1.jpg" >
+                 </div>
 
-                <div class="col-8" >
-                    Thanh xuân là uống tới khi say mềm, là hát đến khi khàn giọng, là cười đến mức nước mắt tuôn rơi.
-Dù bạn có ra sao, có là ai thì tuổi trẻ cũng chỉ tới một lần. Hy vọng bạn hãy sống tự tin sống hết mình đừng để lãng phí những năm tháng tươi đẹp nhất ấy.
+                 <div class="col-8" style="padding-top:80px;" >
+                        <h3>Tăng tốc việc học của bạn với Bubble nào!</h3>
+                        <div class="a1">
+                            Việc học ngôn ngữ trên Duolingo là hoàn toàn miễn phí.
+                        </div>  
                 </div>
-
-                <div class="col-8 " style="padding-left: 100px;">
-                   Biết rằng thanh xuân chính là bỏ lỡ, là nuối tiếc nhưng lại chẳng có ai đủ mạnh mẽ để buông bỏ thứ tình cảm ngây thơ mà đẹp đẽ nhất ấy😔 
-                   Mong rằng tất cả chúng ta sẽ có riêng cho mình 1 thời thanh xuân rực rỡ nhất, đáng nhớ nhất! Đừng ngần ngại để rồi phải hối hận, 
-                   hãy cứ thỏa sức theo đuổi những điều mình mong muốn, bởi đó chính là sức trẻ, là niên thiếu
+                 <div class="col-8 d1" ></div>
+                <div class="col-8 " style="padding-left: 330px; padding-top:80px;">
+                        <h2>Học mọi lúc mọi nơi !</h2>
+                        <div class="a1">
+                            So với việc tốn thời gian để di chuyển tới địa điểm học.
+                            Thì việc học trên Bubble sẽ dễ dàng đối với bạn.
+                        </div>  
                 </div>
 
                 <div class="col-4 text-center">
-                    <img src="static\images\blue-bubble.png" width="100" height="100">
+                    <img src="static\images\bubble1.jpg"style="padding-right: 200px;">
                 </div>
-
-                <div class="col-4 text-center">
-                  <img src="static\images\blue-bubble.png" width="100" height="100">
+                <div>
+                <div class="col-8  d1"></div>
                 </div>
+                <div  class="col-4" style="padding-left: 300px;">
+                    <img src="static\images\bubble1.jpg" >
+                 </div>
 
-                <div class="col-8">
-                   tình yêu học trò nó là một cái gì đó rất khó tả , ấm ấm như tia nắng mặt trời , ngọt ngào và nó cũng là kí ức đẹp nhất nữa
+                 <div class="col-8" style="padding-top:80px;" >
+                        <h2>Bubble với kho tàng kiến thức!</h2>
+                        <div class="a1">
+                            Với hàng trăm đề thi và các kiến thực liên tục được cập nhật.
+                            
+                        </div>  
                 </div>
             </div>
         </div>
@@ -39,6 +49,12 @@ Dù bạn có ra sao, có là ai thì tuổi trẻ cũng chỉ tới một lần
 </script>
 <style>
     .background{
-        background-color: #ffd1dc;
+        background-color: #fafafa;
     }
+    .d1{
+        border-bottom: 2px solid #bbb5b5;
+        margin: 12px auto;
+        
+    }
+    
 </style>
