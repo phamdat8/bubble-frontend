@@ -61,27 +61,27 @@
         methods:{
         submitForm(){
             axios.post(this.$api+'/register', this.form)
-                 .then((res) => {
-                    debugger;
+                .then((res) => {
                     if(res.data.status == 'Success'){
-                        this.$swal({
-                            title: 'Tạo tài khoản thành công',
+                        this.$notify({
+                            title: 'Thành công',
                             type: 'success',
-                            icon: 'success'
+                            text: 'Tạo tài khoản thành công'
                         });
+                        this.$router.push("/");
                     }else{
-                        this.$swal({
-                            title: 'Tài khoản đã tồn tại',
-                            type: 'success',
-                            icon: 'error'
+                        this.$notify({
+                            title: 'Thất bại',
+                            type: 'error',
+                            text: 'Tên đăng nhập đã tồn tại'
                         });
                     }
-                 })
+                })
                  .catch((error) => {
                     // error.response.status Check status code
-                 }).finally(() => {
+                }).finally(() => {
                     //Perform action in always
-                 });
+                });
         }
     }
     }

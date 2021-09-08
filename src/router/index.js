@@ -21,6 +21,11 @@ export const router = new Router({
               path: '/dangky',
               name: 'Register',
               component: () => import("@/components/client/Register")
+            },
+            {
+              path: '/dangnhap',
+              name: 'Login',
+              component: () => import("@/components/client/Login")
             }
           ]
       },

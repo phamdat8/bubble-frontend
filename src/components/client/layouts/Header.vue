@@ -5,7 +5,7 @@
                 <div class="name-text">Bubble</div>
                 <div class="d-flex">
                     <div class="button_container m-2">
-                        <button class="btn-layout"><span>Đăng nhập</span></button>
+                        <router-link to="/dangnhap"><button class="btn-layout"><span>Đăng nhập</span></button></router-link>
                     </div>
                     <div class="button_container m-2">
                         <router-link to="/dangky"><button class="btn-layout"><span>Đăng ký</span></button></router-link>

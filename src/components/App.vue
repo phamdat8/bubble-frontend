@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <notifications position="bottom left" width="500px"/>
     <router-view></router-view>
   </div>
 </template>
@@ -24,5 +25,8 @@
   a{
     text-decoration: none;
   }
-  
+  .vue-notification{
+    font-size: 20px;
+    border-radius: 25px;
+  }
 </style>
