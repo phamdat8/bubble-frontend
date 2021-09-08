@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="col-4 text-center">
-                    <img src="static\images\bubble1.jpg"style="padding-right: 200px;">
+                    <img src="static\images\bubble1.jpg" style="padding-right: 200px;">
                 </div>
                 <div>
                 <div class="col-8  d1"></div>
