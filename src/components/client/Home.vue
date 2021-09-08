@@ -2,7 +2,6 @@
     <div id="home">
         <div class="background">
 <div class="row">
-                
                 <nav class="navbar navbar-fixed-bottom  row p-5">
                     <h2 class="m-0" style="text-align:center;"><b>Lí do bạn nên cùng học với Bubble</b></h2>
                 <div class="col-4" style="padding-left:250px;">

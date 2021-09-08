@@ -2,7 +2,7 @@
     <div id="main">
     <Header />
     <div style="height:106px"></div>
-    <div style="min-height: 800px"><router-view></router-view></div>
+    <div style="min-height: 600px"><router-view></router-view></div>
     <Footer />
     </div>
 </template>
