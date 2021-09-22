@@ -26,6 +26,23 @@ export const router = new Router({
               path: '/dangnhap',
               name: 'Login',
               component: () => import("@/components/client/Login")
+            },
+            {
+              path: '/user',
+              component: () => import("@/components/client/user/Index"),
+              children:
+              [
+                {
+                  path: 'info',
+                  name: 'UserInfo',
+                  component: () => import("@/components/client/user/Info")
+                },
+                {
+                  path: '',
+                  name: 'UserMain',
+                  component: () => import("@/components/client/user/Main")
+                },
+              ]
             }
           ]
       },

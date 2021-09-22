@@ -39,26 +39,19 @@
         },
         methods:{
         submitForm(){
-            axios.post(this.$api+'/register', this.form)
+            axios.post(this.$api+'/session', this.form)
                 .then((res) => {
-                    if(res.data.status == 'Success'){
-                        this.$swal({
-                            title: 'Tạo tài khoản thành công',
-                            type: 'success',
-                            icon: 'success'
-                        });
-                    }else{
-                        this.$swal({
-                            title: 'Tài khoản đã tồn tại',
-                            type: 'success',
-                            icon: 'error'
-                        });
-                    }
-                })
-                 .catch((error) => {
-                    // error.response.status Check status code
-                }).finally(() => {
-                    //Perform action in always
+                    this.$notify({
+                        title: res.data.title,
+                        type: res.data.status,
+                        text: res.data.message
+                    });
+                    if(res.data.status == 'success'){
+                        localStorage.login = true;
+                        localStorage.username = res.data.data[0]["username"];
+                        localStorage.name = res.data.data[0]["name"];
+                        this.$router.push("/user/info");
+                    } 
                 });
         }
     }

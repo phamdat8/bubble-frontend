@@ -16,12 +16,6 @@
                     <label>Tên</label>
                 </div>
                 <div class="group">      
-                    <input type="text" required v-model="form.email">
-                    <span class="highlight"></span>
-                    <span class="bar"></span>
-                    <label>Email</label>
-                </div>
-                <div class="group">      
                     <input type="password" required v-model="form.password">
                     <span class="highlight"></span>
                     <span class="bar"></span>
@@ -50,7 +44,6 @@
             return{
                 form: {
                     username: '',
-                    email: '',
                     password: '',
                     confirm: '',
                     name: '',
@@ -68,7 +61,7 @@
                             type: 'success',
                             text: 'Tạo tài khoản thành công'
                         });
-                        this.$router.push("/");
+                        this.$router.push("/dangnhap");
                     }else{
                         this.$notify({
                             title: 'Thất bại',
