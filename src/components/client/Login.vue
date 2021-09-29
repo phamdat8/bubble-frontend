@@ -50,9 +50,11 @@
                         localStorage.login = true;
                         localStorage.username = res.data.data[0]["username"];
                         localStorage.name = res.data.data[0]["name"];
+                        localStorage.user_id = res.data.data[0]["id"];
                         this.$router.push("/user/info");
-                    } 
-                });
+                    }
+                }
+            );
         }
     }
     }

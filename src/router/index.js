@@ -5,12 +5,12 @@ import Router from "vue-router";
 Vue.use(Router);
 
 export const router = new Router({
-  routes : 
+  routes :
   [
       {
           path: '',
           component: () => import("@/components/client/Index"),
-          children: 
+          children:
           [
             {
                 path: '',
@@ -42,6 +42,11 @@ export const router = new Router({
                   name: 'UserMain',
                   component: () => import("@/components/client/user/Main")
                 },
+                {
+                  path: 'topic',
+                  name: 'UserTopic',
+                  component: () => import("@/components/client/user/Topic")
+                },
               ]
             }
           ]
@@ -49,7 +54,7 @@ export const router = new Router({
       {
         path: '/admin',
         component: () => import("@/components/admin/Index"),
-        children: 
+        children:
         [
           {
               path: '',
