@@ -2,8 +2,11 @@
     <div id="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-pink fixed-top">
             <div class="container-fluid">
-                <div class="name-text">Bubble</div>
-                <div class="d-flex">
+                <router-link to="/"><div class="name-text">Bubble</div></router-link>
+                <div v-if="login == 'true'">
+                  <router-link to="/logout">Logout</router-link>
+                </div>
+                <div v-else class="d-flex">
                     <div class="button_container m-2">
                         <router-link to="/dangnhap"><button class="btn-layout"><span>Đăng nhập</span></button></router-link>
                     </div>
@@ -17,7 +20,27 @@
 </template>
 <script>
     export default {
-        name: 'Header'
+        name: 'Header',
+        data (){
+            return {
+                login: null
+            }
+        },
+        mounted() {
+          this.login = localStorage.login;
+          debugger
+        },
+        methods: {
+          forceRerender() {
+              // Remove my-component from the DOM
+              this.renderComponent = false;
+
+              this.$nextTick(() => {
+                // Add the component back in
+                this.renderComponent = true;
+              });
+      }
+    }
     }
 
 

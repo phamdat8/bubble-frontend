@@ -47,9 +47,23 @@ export const router = new Router({
                   name: 'UserTopic',
                   component: () => import("@/components/client/user/Topic")
                 },
+                {
+                  path: 'lesson/:id',
+                  name: 'UserLesson',
+                  component: () => import("@/components/client/user/Lesson")
+                },
+                {
+                  path: 'quiz/:id',
+                  name: 'Quiz',
+                  component: () => import("@/components/client/user/Quiz")
+                },
               ]
             }
           ]
+      },
+      {
+        path: '/logout',
+        component: () => import("@/components/client/Logout"),
       },
       {
         path: '/admin',

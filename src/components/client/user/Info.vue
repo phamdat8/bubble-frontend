@@ -14,12 +14,20 @@
     </div>
 </template>
 <script>
-  export default {
+    export default {
         name: 'UserInfo',
         data(){
             return{
                 username: localStorage.username,
                 name: localStorage.name,
+            }
+        },
+        mounted() {
+            if (localStorage.getItem('reloaded')) {
+                localStorage.removeItem('reloaded');
+            } else {
+                localStorage.setItem('reloaded', '1');
+                location.reload();
             }
         },
     }

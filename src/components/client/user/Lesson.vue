@@ -1,16 +1,17 @@
 <template>
-    <div id="user-main">
+    <div id="user-lesson-list">
         <div class="m-5 text-center">
             <div class="row border border-primary rounded m-5 p-5 pt-2 mt-2">
-                <h1>Chủ đề</h1>
+                <h1>Bài học</h1>
                 <div class="col-12 topic-container m-2"  v-for="item in rel" :key="item.id">
                     <div class="row">
                         <div class="col-10">
                             <span class="topic-name">{{ item.name }}</span>
-                            <small class="topic-process">Hoàn thành: {{ item.process }}/{{ item.total }}</small>
+                            <div v-if="item.complete == true" class="com">Đã hoàn thành</div>
+                            <div v-else class="non-com">Chưa hoàn thành</div>
                         </div>
                         <div class="col-2 vertical-center">
-                            <router-link :to="`/user/lesson/${item.id}`">
+                            <router-link :to="`/user/quiz/${item.id}`">
                                 <button class="btn btn-outline-primary">Làm bài</button>
                             </router-link>
                         </div>
@@ -23,15 +24,18 @@
 <script>
     import axios from 'axios';
     export default {
-        name: 'UserTopic',
+        name: 'UserLesson',
         data () {
             return {
                 rel: null
             }
         },
         mounted () {
+            let params = {};
+            params["user_id"] = localStorage.user_id;
+            params["topic_id"] = this.$route.params.id;
             axios
-            .get(this.$api+'/topic/user.php'+'?user_id='+localStorage.user_id)
+            .get(this.$api+'/lesson/user.php', {params: params})
             .then(res => {
                this.rel = res.data.data
             })
@@ -55,9 +59,19 @@
         font-size: 18px;
     }
     .vertical-center {
-        min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+        min-height: 100%;
 
         display: flex;
         align-items: center;
+    }
+    .com{
+        color: green;
+        font-weight: bold;
+        margin-left: 30px;
+    }
+    .non-com{
+        color: blue;
+        font-weight: bold;
+        margin-left: 30px;
     }
 </style>
