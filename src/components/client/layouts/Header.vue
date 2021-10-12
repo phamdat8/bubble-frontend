@@ -28,7 +28,6 @@
         },
         mounted() {
           this.login = localStorage.login;
-          debugger
         },
         methods: {
           forceRerender() {

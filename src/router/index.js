@@ -70,12 +70,40 @@ export const router = new Router({
         component: () => import("@/components/admin/Index"),
         children:
         [
-          {
-              path: '',
-              name: "AdminHome",
-              component: () => import("@/components/admin/Home")
-          }
+            {
+                path: 'dashboard',
+                name: "Dashboard",
+                component: () => import("@/components/admin/components/Dashboard")
+            },
+            {
+                path: 'user',
+                name: 'AdminUser',
+                component: () => import("@/components/admin/components/UserManager")
+
+            },
+            {
+                path: 'topic',
+                name: 'Admintopic',
+                component: () => import("@/components/admin/components/Topic")
+
+            },
+            {
+                path: 'lesson',
+                name: 'AdminLesson',
+                component: () => import("@/components/admin/components/Lesson")
+
+            },
+            {
+                path: 'question',
+                name: 'AdminQuestion',
+                component: () => import("@/components/admin/components/Question")
+
+            }
         ]
+      },
+      {
+        path: '/admin-login',
+        component: () => import("@/components/admin/Login")
       }
   ]
 })

@@ -1,8 +1,8 @@
 <template>
     <div id="login" class="d-flex justify-content-center row">
         <div class="col-4 mt-5">
-            <h1><b> Đăng nhập bubble</b></h1>
-            <form v-on:submit.prevent="submitForm">
+            <h1><b> Đăng nhập quản trị bubble</b></h1>
+            <form class v-on:submit.prevent="submitForm">
                 <div class="group">      
                     <input type="text" required v-model="form.username">
                     <span class="highlight"></span>
@@ -51,7 +51,7 @@
                         localStorage.username = res.data.data[0]["username"];
                         localStorage.name = res.data.data[0]["name"];
                         localStorage.user_id = res.data.data[0]["id"];
-                        this.$router.push("/user/info");
+                        this.$router.push("/admin/dashboard");
                         
                     }
                 }
