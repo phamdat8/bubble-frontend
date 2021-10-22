@@ -132,6 +132,7 @@
                 
             },
             getData: function (params) {
+                debugger;
                 axios.get(this.$api+'/user/list.php', {params: params})
                 .then(res => {
                     this.items = res.data.data;
