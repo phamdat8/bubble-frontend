@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-3 text-center">
                 <div class="img-info">
-                    <img src="https://instagram.fsgn5-1.fna.fbcdn.net/v/t51.2885-19/s150x150/27576320_152591802212955_3203360697266208768_n.jpg?_nc_ht=instagram.fsgn5-1.fna.fbcdn.net&_nc_ohc=L6tFjMrPeOgAX-IRiBA&tn=xTc9ZdysLBeM3JTg&edm=ABfd0MgBAAAA&ccb=7-4&oh=1ea6a04b9c2e27300f2a22e6ed442be0&oe=6145E7E8&_nc_sid=7bff83" height="100%">
+                    <img v-bind:src="avatar" height="100%">
                 </div>
             </div>
             <div class="col-9 p-3">
@@ -20,6 +20,7 @@
             return{
                 username: localStorage.username,
                 name: localStorage.name,
+                avatar: null
             }
         },
         mounted() {
@@ -29,6 +30,7 @@
                 localStorage.setItem('reloaded', '1');
                 location.reload();
             }
+            this.avatar = this.$file + '/users/' + localStorage.user_id + '.png';
         },
     }
 </script>

@@ -4,7 +4,14 @@
             <div class="container-fluid">
                 <router-link to="/"><div class="name-text">Bubble</div></router-link>
                 <div v-if="login == 'true'">
-                  <router-link to="/logout">Logout</router-link>
+                  <div class="dropdown">
+                      <img class="dropdown-toggle img-nav" v-bind:src="avatar" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><router-link class="dropdown-item" to="/">Trang chính</router-link></li>
+                          <li><router-link class="dropdown-item" to="/user/info">Dashboard</router-link></li>
+                          <li><router-link class="dropdown-item" to="/logout">Đăng xuất</router-link></li>
+                      </ul>
+                  </div>
                 </div>
                 <div v-else class="d-flex">
                     <div class="button_container m-2">
@@ -23,11 +30,13 @@
         name: 'Header',
         data (){
             return {
-                login: null
+                login: null,
+                avatar: null
             }
         },
         mounted() {
           this.login = localStorage.login;
+          this.avatar = this.$file + '/users/' + localStorage.user_id + '.png';
         },
         methods: {
           forceRerender() {
@@ -108,6 +117,14 @@
   font-size: 25px; 
 }
 
-
+.img-nav{
+  height: 50px;
+  width: 50px;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+.dropdown{
+  padding-left: 100px;
+}
 
 </style>
