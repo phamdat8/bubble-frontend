@@ -57,6 +57,11 @@ export const router = new Router({
                   name: 'Quiz',
                   component: () => import("@/components/client/user/Quiz")
                 },
+                {
+                  path: 'document',
+                  name: 'Documnet',
+                  component: () => import("@/components/client/user/Doc")
+                },
               ]
             }
           ]
@@ -97,6 +102,12 @@ export const router = new Router({
                 path: 'question',
                 name: 'AdminQuestion',
                 component: () => import("@/components/admin/components/Question")
+
+            },
+            {
+                path: 'document',
+                name: 'AdminDocument',
+                component: () => import("@/components/admin/components/Document")
 
             }
         ]

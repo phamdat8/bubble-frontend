@@ -42,6 +42,9 @@
         <div>
             <div class="border border-primary rounded p-5">
                 <div class="m-4 p-4 post-box" v-for="post in posts" v-bind:key="post.id">
+                    <div v-on:click="del(post.id)" v-show="post.user_id == current_user_id">
+                        xoá
+                    </div>
                     <div class="user row">
                         <img v-bind:src="post.user_img" height="100%">
                         <div class="user-name col mt-2">
@@ -71,10 +74,8 @@
                             </div>
                             <button v-on:click="post_comment(post.id)" class="btn btn-outline-primary col-2 mt-2 mb-0">Bình luận</button>
                         </div>
-                        
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
@@ -88,17 +89,19 @@
                 posts: null,
                 item: {content: null, file: null, },
                 comment: '',
+                current_user_id: null,
 
             }
         },
         mounted() {
-                this.config =  {
-                    headers: {
-                        'Content-Type': 'multipart/form-data'
-                    }
+            this.current_user_id = localStorage.user_id;
+            this.config =  {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
                 }
-                this.getData();
-            },
+            }
+            this.getData();
+        },
         methods: {
             getData: function() {
                 let params = new FormData();
@@ -158,7 +161,22 @@
                     })
                     this.comment = "";
                 })
+            },
+            del: function(id) {
+                let params = new FormData();
+                params.append('id', id);
+                params.append('action', 'delete');
+                axios.post(this.$api+'/post', params, this.config)
+                .then(res => {
+                    this.$notify({
+                        title: res.data.title,
+                        type: res.data.status,
+                        text: res.data.message
+                    });
+                    document.location.reload();
+                })
             }
+
         }
     }
     

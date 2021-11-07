@@ -6,6 +6,7 @@
             <li class="menu-item"><router-link to="/admin/topic"> Chủ đề </router-link></li>
             <li class="menu-item"><router-link to="/admin/lesson"> Bài học </router-link></li>
             <li class="menu-item"><router-link to="/admin/question"> Câu hỏi </router-link></li>
+            <li class="menu-item"><router-link to="/admin/document"> Tài liệu </router-link></li>
             <li class="menu-item"><router-link to="/logout"> Đăng xuất </router-link></li>
         </ul>
     </div>

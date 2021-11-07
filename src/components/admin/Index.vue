@@ -2,10 +2,10 @@
       <div id="admin">
 			<Header />
 			<div class="row main">
-				<div class="col-2 p-0">
+				<div class="col-3 p-0">
 					<Menu />
 				</div>
-				<div class="col-10 p-0">
+				<div class="col-9 p-0">
 					<div class="data-box">
 						<router-view></router-view>
 					</div>
